@@ -15,8 +15,27 @@
 	https://docs.streamlit.io/en/latest/
 """
 import streamlit as st
+from sympy import im
+import app_menu.home as am
+import app_menu.about_tweet_classifier_app as atca
+import app_menu.data_profession as dp
+import app_menu.classify_tweets as ct
+import app_menu.analyze_tweets as at
 
 def main():
-    st.write('')
+    with st.sidebar:
+        app_menu_items = st.radio("", ('🏠 Home', '📰 About', '📈 Analyze', '🐦 Classify Tweets', '💻 CW3 Data Professionals'))
+
+    if app_menu_items == '🏠 Home':
+        am.home_menu()
+    elif app_menu_items == '📰 About':
+        atca.about()
+    elif app_menu_items == '📈 Analyze':
+        at.analyzer()
+    elif app_menu_items == '🐦 Classify Tweets':
+        ct.classifier()
+    elif app_menu_items == '💻 CW3 Data Professionals':
+        dp.data_professionals()
+    
 if __name__ == '__main__':
 	main()

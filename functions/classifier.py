@@ -42,13 +42,13 @@ def classify(model_choice, input_text, prediction_labels):
 
     # prediction will be made on which model user selects
     if model_choice == 'Logistic Regression':
-        predictor = load_prediction_models("./resources/Logistic_regression.pkl")
+        predictor = load_prediction_models("./resources/lr.pkl")
         prediction = predictor.predict(vect_text)
     elif model_choice == 'Random Forest':
-        predictor = load_prediction_models("./resources/Random_model.pkl")
+        predictor = load_prediction_models("./resources/rf.pkl")
         prediction = predictor.predict(vect_text)
     elif model_choice == 'Decision Tree':
-        predictor = load_prediction_models("./resources/Dec_tree_model.pkl")
+        predictor = load_prediction_models("./resources/dt.pkl")
         prediction = predictor.predict(vect_text)
 
     classified = get_keys(prediction, prediction_labels)
