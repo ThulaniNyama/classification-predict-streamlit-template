@@ -1,6 +1,11 @@
 #streamlit dependencies
 import streamlit as st
 import joblib, os
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
 import functions.classifier as classified
 from nlppreprocess import NLP
 nlp = NLP()

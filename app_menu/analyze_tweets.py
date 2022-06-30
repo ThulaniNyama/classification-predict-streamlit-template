@@ -2,6 +2,10 @@
 from matplotlib.pyplot import title
 from nltk.corpus.reader.pl196x import ANA
 import streamlit as st
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.tokenize import TreebankWordTokenizer
 tbt = TreebankWordTokenizer()
 import pandas as pd
@@ -37,7 +41,7 @@ def analyzer():
                 #import functions.plot_word_cloud as pwd
                 #pwd.gen_wordcloud(title)
                 image = Image.open('resources/imgs/word_cloud.png')
-                st.image(image)
+                st.image(image, use_column_width=True)
 
         elif analyzer == 'Missing Values':
                 #import functions.missing_values as missing
