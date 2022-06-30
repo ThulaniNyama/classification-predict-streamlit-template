@@ -44,9 +44,11 @@ def analyzer():
                 #pwd.gen_wordcloud(title)
                 image = Image.open('resources/imgs/word_cloud.png')
                 st.image(image, use_column_width=True)
+                st.info('The word cloud consists of most popular words and the bigger the word the more popular it is.')
 
         elif analyzer == 'Missing Values':
                 #import functions.missing_values as missing
                 #missing.missing_vals()
                 image = Image.open('resources/imgs/missingwords.png')
                 st.image(image)
+                st.info('Train data set has no empty values.')
