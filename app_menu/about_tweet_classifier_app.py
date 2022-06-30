@@ -16,10 +16,14 @@ def about():
                 product/service may be received. The messages are classified by their respective status.
                 """)
 
+    link = 'https://www.youtube.com/shorts/fCfvygfGSPI'
+    about ='For instructions on how to classify please ' + f'<a style="color:white" target="_blank" href="{link}">click here</a>'
+    st.write(about + ' 👈', unsafe_allow_html=True)
+    
     link = 'https://github.com/TEAM-CW3/climate-change-belief-analysis-2022#readme'
     about ='For more information CW3\'s ML Models please ' + f'<a style="color:white" target="_blank" href="{link}">click here</a>'
     st.write(about + ' 👈', unsafe_allow_html=True)
     raw = st.checkbox('See raw data')
     if raw:
         data = pd.read_csv('https://raw.githubusercontent.com/TEAM-CW3/classification-predict-streamlit-data/main/train.csv')
-        st.dataframe(data.head(25))
+        st.dataframe(data.head(10))

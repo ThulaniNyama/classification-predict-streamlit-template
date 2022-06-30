@@ -30,11 +30,13 @@ def analyzer():
                 #graph.plot_line_and_bar()
                 image = Image.open('resources/imgs/Bargraph.png')
                 st.image(image)
+                st.info('By observing the graphs you can see that the average length for all opinions is relatively the same,\nthis may be due to that every tweet has a word limit. However when we comparing the density between negative and positive sentiments there is noticable difference.')
 
         elif analyzer == 'Pie Chart':
                 st.write('Distribution of the sentiments')
                 import functions.pie_chart as pie
                 pie.plot_pie_chart()
+                st.info('After observing our Pie-Chart above you can see than more than half of the sample tweets come from positive sentiments, tweets from sentiment that do not believe in man-made climate change are the least and News are the second most popular.')
         
 
         elif analyzer == 'Word Cloud':

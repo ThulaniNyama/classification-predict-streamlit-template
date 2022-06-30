@@ -13,13 +13,13 @@ nlp = NLP()
 def classifier():
     vectorizer = open('./resources/tfidfvect.pkl','rb')
     tweet_cv = joblib.load(vectorizer)
-    data_source = ['Select option', 'Tweet', 'Dataset']
+    data_source = ['Load data', 'Tweet Data']
 
     st.subheader('Tweet Classification')
 
     source_selection = st.selectbox('Select data source', data_source)
     # st.rain()
-    if source_selection == 'Tweet':
+    if source_selection == 'Tweet Data':
         # Load Our Models
         def load_prediction_models(model_file):
             loaded_models = joblib.load(open(os.path.join(model_file),"rb"))
