@@ -11,3 +11,4 @@ mlxtend==0.20.0
 seaborn==0.11.2
 nlp==0.4.0
 nlppreprocess==1.0.2
+nltk==3.7
