@@ -2,6 +2,7 @@
 import re
 import nltk
 nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger')
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import pos_tag
 from nlppreprocess import NLP as nlp
