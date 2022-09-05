@@ -15,7 +15,7 @@
 	https://docs.streamlit.io/en/latest/
 """
 import streamlit as st
-from sympy import im
+# from sympy import im
 import app_menu.home as am
 import app_menu.about_tweet_classifier_app as atca
 import app_menu.data_profession as dp
