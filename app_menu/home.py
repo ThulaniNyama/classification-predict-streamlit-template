@@ -9,5 +9,5 @@ from PIL import Image
 # """Climate Belief Classifier App"""
 def home_menu():
     st.title('Climate Belief Classifier App \U0001F4E1')
-    image = Image.open('./resources/imgs/tweet_birds.png')
+    image = Image.open('./resources/imgs/tweet_birds1.png')
     st.image(image, caption='Do you believe in man-made climate change?', use_column_width=True)
