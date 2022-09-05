@@ -1,5 +1,6 @@
 #streamlit dependencies
 import re
+import nltk
 nltk.download('stopwords')
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import pos_tag
